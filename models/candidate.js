@@ -22,24 +22,17 @@ class Candidate{
         return db.collection('candidates')
         .insertOne(this)
         .then( result => {
-            console.log(result) ;
+            // console.log(result) ;
         } )
         .catch( err => {
             console.log(err) ;
         })
     }
-    static uniqueEmail(email){
+    static uniqueEmails(emails){
         const db = require("../app")() ;
-        return db.collection("candidates").find({email}).next()
+        return db.collection("candidates").find({email : { $in : emails }}).toArray()
             .then( result => {
-                if( result ){
-                    console.log(email + " present") ;
-                    return false;
-                }
-                else{
-                    console.log(email + " absent") ;
-                    return true ;
-                }
+                return result ;
                 // console.log(result) ;
             } )
             .catch(err => {

@@ -7,7 +7,7 @@ const mongoClient = mongodb.MongoClient ;
 
 let _db = null ;
 
-const PortalRoutes = require("./routes/portal") ;
+const HomeRoutes = require("./routes/home") ;
 const ErrorRoutes = require("./routes/error") ;
 
 const app = express() ;
@@ -28,9 +28,9 @@ app.use(express.static(path.join(__dirname,"/public"))) ;
 app.set('view engine','ejs');
 app.set('views','views') ;
 
-app.use(PortalRoutes) ;
-
+app.use(HomeRoutes) ;
 app.use(ErrorRoutes) ;
+
 mongoClient.connect("mongodb+srv://punit:punit@main1.bhsyj.mongodb.net/KlimbInternProject?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
