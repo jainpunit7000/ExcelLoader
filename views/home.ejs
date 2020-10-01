@@ -1,0 +1,36 @@
+
+<%- include("./includes/head.ejs") %>
+<link rel="stylesheet" href="/css/home.css">
+
+<body>
+    <div class="container outer">
+        <div class="row">
+            <div class="col-12">
+                <div class="p-2">
+                    <a href="/home" class="head-link" style="color:white">Add from Excel</a>
+                    <!-- <a href="/home" class="head-link">Reset</a> -->
+                    <hr>
+                </div>
+            </div>
+            <div class="col-12 m-3">
+                <div class="p-3">
+                    <p class="colr">Add Candidates to Database..</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center" >
+                        <form method="POST" action="/upload" enctype="multipart/form-data">
+                            <label for="xlFile" class="custom-file-upload">
+                                <i class="fa fa-upload colr" style="font-size:32px"></i>
+                            </label>
+                            <input id="xlFile" name="xlFile" type="file"/> <br>
+                            <!-- accept=".xls,.xlsx " -->
+                            <h5 id="fileDesc" class="colr" style="font-size:16px">Upload a .xlsx or .xls file here</h5>
+                            <input id="btn" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include("./includes/end.ejs") %>

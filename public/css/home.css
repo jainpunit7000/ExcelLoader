@@ -1,0 +1,42 @@
+body{
+    background-color: #C4DBE0;
+}
+
+.outer{
+    border: solid 2px rgb(209, 199, 199);
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px rgb(228, 223, 223);
+    margin: 110px auto;
+    height: 60vh ;
+    background-color: #0C6980;
+}
+
+.head-link{
+    color : #C4DBE0;
+    padding-right: 32px;
+}
+
+.head-link:hover{
+    text-decoration: none;
+    color: white;
+    transform: translateX(-1px);
+    transform: translateY(-2px);
+    transition: all 0.2s;
+}
+
+hr{
+    background-color: rgb(51, 50, 50);
+    margin :4px auto ;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.colr{
+    color : #C4DBE0;
+}
+
+#btn{
+    display: none;
+}
